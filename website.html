@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    ul {
+      background-color: #3F3F3F;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
+    }
+
+    ul > li {
+      display: inline-block;
+      position: relative;
+    }
+
+    ul li a, ul li label {
+      display: block;
+      padding: 15px 20px;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    ul li:hover {
+      background-color: rgb(1, 57, 18);
+      transition: 0.3s;
+    }
+
+    ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      width: 150px;
+    }
+
+    ul li:hover > ul {
+      display: block;
+    }
+
+    ul li ul li {
+      display: block;
+      position: relative;
+    }
+
+    ul li ul li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 150px;
+      background-color: #555;
+      width: 150px;
+    }
+
+    ul li ul li:hover > ul {
+      display: block;
+    }
+
+    i {
+      padding-right: 10px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .home-content {
+      display: none;
+      background-image: url(pictures/forest.jpg);
+      background-size: cover;
+      background-position: center;
+      position: fixed;
+      top: 45px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: calc(100vh - 45px);
+      z-index: 998;
+    }
+
+    #show-home:checked ~ .home-content {
+      display: block;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 36px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="radio" name="menu" id="show-home" hidden checked/>
+
+  <ul>
+    <li>
+      <label for="show-home"><i class="fa-solid fa-house-user"></i>Home</label>
+    </li>
+    <li>
+      <a href="#"><i class="fa-solid fa-newspaper"></i>News</a>
+      <ul>
+        <li>
+          <a href="#">News 1</a>
+          <ul>
+            <li><a href="#">Detail 1</a></li>
+            <li><a href="#">Detail 2</a></li>
+            <li><a href="#">Detail 3</a></li>
+            <li><a href="#">Detail 4</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">News 2</a>
+          <ul>
+            <li><a href="#">Detail 1</a></li>
+            <li><a href="#">Detail 2</a></li>
+            <li><a href="#">Detail 3</a></li>
+            <li><a href="#">Detail 4</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">News 3</a>
+          <ul>
+            <li><a href="#">Detail 1</a></li>
+            <li><a href="#">Detail 2</a></li>
+            <li><a href="#">Detail 3</a></li>
+            <li><a href="#">Detail 4</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">News 4</a>
+          <ul>
+            <li><a href="#">Detail 1</a></li>
+            <li><a href="#">Detail 2</a></li>
+            <li><a href="#">Detail 3</a></li>
+            <li><a href="#">Detail 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="contact.html"><i class="fa-solid fa-address-card"></i>Contact</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-address-card"></i>About</a></li>
+  </ul>
+
+  <div class="home-content">
+    <div class="overlay">
+      <h1>WELCOME TO NİRVANA</h1>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
